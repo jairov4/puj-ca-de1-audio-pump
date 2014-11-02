@@ -1,9 +1,11 @@
 Computer Architecture Course
 ============================
+_Jairo Andres Velasco_ - [Pontificia Universidad Javeriana Cali](http://www.javerianacali.edu.co)
 
 Base files for project in Computer Architecture course of 2014-2.
-This is a system built using Qsys that includes IP cores for audio, SDRAM, SRAM, 7-segment display decoder and GPIO, but includes an exported Avalon Memory Mapped master interface in order to be useful as education starter excercise into memory mapped interfaces.
+This is a system built using Qsys that includes IP cores for audio, SDRAM, SRAM, 7-segment display decoder and GPIO; and additionally includes an exported Avalon Memory Mapped master interface in order to be useful as education starter excercise into memory mapped interfaces.
 This design is targeted to _Terasic DE1_ board.
+The Avalon Memory Mapped master interface specification can be found in http://www.altera.com/literature/manual/mnl_avalon_spec.pdf.
 
 Getting started
 ---------------

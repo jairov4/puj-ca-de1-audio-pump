@@ -15,7 +15,7 @@
    <frequency preferredWidth="344" />
   </columns>
  </clocktable>
- <library expandedCategories="Library,Project" />
+ <library expandedCategories="Project,Library/Terasic Technologies Inc,Library" />
  <window width="1382" height="754" x="-8" y="-8" />
  <generation path="../auto-src" />
  <hdlexample language="VERILOG" />

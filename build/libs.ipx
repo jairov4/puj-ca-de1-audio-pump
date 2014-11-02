@@ -1,0 +1,3 @@
+<library>
+   <path path="../terasic-ip/components.ipx" />
+</library>

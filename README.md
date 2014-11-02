@@ -14,4 +14,4 @@ To build this project follow this steps.
 
   1. Download one snapshot of this project.
   2. Write your util function and instance the system unit in this project.
-  3. Build the project using Altera Quartus II v13 SP1
+  3. Build the project using Altera Quartus II v13 SP1, the project file is `build/puj-ca-de1-audio-pump.qpf`

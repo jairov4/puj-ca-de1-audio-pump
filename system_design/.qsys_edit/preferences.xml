@@ -3,20 +3,21 @@
  <debug showDebugMenu="0" />
  <systemtable>
   <columns>
-   <connections preferredWidth="127" />
+   <connections preferredWidth="175" />
    <irq preferredWidth="34" />
    <name preferredWidth="303" />
+   <inputclock preferredWidth="148" />
   </columns>
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="363" />
-   <clocksource preferredWidth="363" />
-   <frequency preferredWidth="344" />
+   <clockname preferredWidth="442" />
+   <clocksource preferredWidth="440" />
+   <frequency preferredWidth="423" />
   </columns>
  </clocktable>
- <library expandedCategories="Project,Library/Terasic Technologies Inc,Library" />
- <window width="1382" height="754" x="-8" y="-8" />
+ <library expandedCategories="Library,Project" />
+ <window width="1680" height="1010" x="0" y="0" />
  <generation path="../auto-src" />
  <hdlexample language="VERILOG" />
 </preferences>

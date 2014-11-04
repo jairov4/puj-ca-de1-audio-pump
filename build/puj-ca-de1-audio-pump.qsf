@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C20F484C7
-set_global_assignment -name TOP_LEVEL_ENTITY system_design
+set_global_assignment -name TOP_LEVEL_ENTITY "puj-ca-de1-audio-pump"
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:53:26  OCTOBER 31, 2014"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -49,10 +49,163 @@ set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
 set_global_assignment -name DEVICE_FILTER_PIN_COUNT 484
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 7
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH 100 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name QSYS_FILE ../system_design/system_design.qsys
+set_global_assignment -name SDC_FILE "puj-ca-de1-audio-pump.out.sdc"
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name INCREMENTAL_COMPILATION_EXPORT_FILE system_design.qxp
+set_global_assignment -name INCREMENTAL_COMPILATION_EXPORT_POST_SYNTH ON
+set_global_assignment -name INCREMENTAL_COMPILATION_EXPORT_POST_FIT ON
+set_global_assignment -name INCREMENTAL_COMPILATION_EXPORT_ROUTING ON
+set_global_assignment -name INCREMENTAL_COMPILATION_EXPORT_PARTITION_NAME Top
+set_global_assignment -name INCREMENTAL_COMPILATION_EXPORT_FLATTEN ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC_FOR_AREA ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_MAP_LOGIC_TO_MEMORY_FOR_AREA ON
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_location_assignment PIN_J2 -to sevenseg0_oSEG0[0]
+set_location_assignment PIN_J1 -to sevenseg0_oSEG0[1]
+set_location_assignment PIN_H2 -to sevenseg0_oSEG0[2]
+set_location_assignment PIN_H1 -to sevenseg0_oSEG0[3]
+set_location_assignment PIN_F2 -to sevenseg0_oSEG0[4]
+set_location_assignment PIN_F1 -to sevenseg0_oSEG0[5]
+set_location_assignment PIN_E2 -to sevenseg0_oSEG0[6]
+set_location_assignment PIN_E1 -to sevenseg0_oSEG1[0]
+set_location_assignment PIN_H6 -to sevenseg0_oSEG1[1]
+set_location_assignment PIN_H5 -to sevenseg0_oSEG1[2]
+set_location_assignment PIN_H4 -to sevenseg0_oSEG1[3]
+set_location_assignment PIN_G3 -to sevenseg0_oSEG1[4]
+set_location_assignment PIN_D2 -to sevenseg0_oSEG1[5]
+set_location_assignment PIN_D1 -to sevenseg0_oSEG1[6]
+set_location_assignment PIN_G5 -to sevenseg0_oSEG2[0]
+set_location_assignment PIN_G6 -to sevenseg0_oSEG2[1]
+set_location_assignment PIN_C2 -to sevenseg0_oSEG2[2]
+set_location_assignment PIN_C1 -to sevenseg0_oSEG2[3]
+set_location_assignment PIN_E3 -to sevenseg0_oSEG2[4]
+set_location_assignment PIN_E4 -to sevenseg0_oSEG2[5]
+set_location_assignment PIN_D3 -to sevenseg0_oSEG2[6]
+set_location_assignment PIN_F4 -to sevenseg0_oSEG3[0]
+set_location_assignment PIN_D5 -to sevenseg0_oSEG3[1]
+set_location_assignment PIN_D6 -to sevenseg0_oSEG3[2]
+set_location_assignment PIN_J4 -to sevenseg0_oSEG3[3]
+set_location_assignment PIN_L8 -to sevenseg0_oSEG3[4]
+set_location_assignment PIN_F3 -to sevenseg0_oSEG3[5]
+set_location_assignment PIN_D4 -to sevenseg0_oSEG3[6]
+set_location_assignment PIN_B12 -to clk_clk
+set_location_assignment PIN_A6 -to audio0_ADCLRC
+set_location_assignment PIN_B6 -to audio0_ADCDAT
+set_location_assignment PIN_A5 -to audio0_DACLRC
+set_location_assignment PIN_B5 -to audio0_DACDAT
+set_location_assignment PIN_B4 -to mclk_clk
+set_location_assignment PIN_A4 -to audio0_BCLK
+set_location_assignment PIN_A3 -to i2c0_scl_pad_io
+set_location_assignment PIN_B3 -to i2c0_sda_pad_io
+set_location_assignment PIN_W4 -to sdram0_addr[0]
+set_location_assignment PIN_W5 -to sdram0_addr[1]
+set_location_assignment PIN_Y3 -to sdram0_addr[2]
+set_location_assignment PIN_Y4 -to sdram0_addr[3]
+set_location_assignment PIN_R6 -to sdram0_addr[4]
+set_location_assignment PIN_R5 -to sdram0_addr[5]
+set_location_assignment PIN_P6 -to sdram0_addr[6]
+set_location_assignment PIN_P5 -to sdram0_addr[7]
+set_location_assignment PIN_P3 -to sdram0_addr[8]
+set_location_assignment PIN_N4 -to sdram0_addr[9]
+set_location_assignment PIN_W3 -to sdram0_addr[10]
+set_location_assignment PIN_N6 -to sdram0_addr[11]
+set_location_assignment PIN_U3 -to sdram0_ba[0]
+set_location_assignment PIN_V4 -to sdram0_ba[1]
+set_location_assignment PIN_T3 -to sdram0_cas_n
+set_location_assignment PIN_N3 -to sdram0_cke
+set_location_assignment PIN_U4 -to sdram_clk_clk
+set_location_assignment PIN_T6 -to sdram0_cs_n
+set_location_assignment PIN_U1 -to sdram0_dq[0]
+set_location_assignment PIN_U2 -to sdram0_dq[1]
+set_location_assignment PIN_V1 -to sdram0_dq[2]
+set_location_assignment PIN_V2 -to sdram0_dq[3]
+set_location_assignment PIN_W1 -to sdram0_dq[4]
+set_location_assignment PIN_W2 -to sdram0_dq[5]
+set_location_assignment PIN_Y1 -to sdram0_dq[6]
+set_location_assignment PIN_Y2 -to sdram0_dq[7]
+set_location_assignment PIN_N1 -to sdram0_dq[8]
+set_location_assignment PIN_N2 -to sdram0_dq[9]
+set_location_assignment PIN_P1 -to sdram0_dq[10]
+set_location_assignment PIN_P2 -to sdram0_dq[11]
+set_location_assignment PIN_R1 -to sdram0_dq[12]
+set_location_assignment PIN_R2 -to sdram0_dq[13]
+set_location_assignment PIN_T1 -to sdram0_dq[14]
+set_location_assignment PIN_T2 -to sdram0_dq[15]
+set_location_assignment PIN_R7 -to sdram0_dqm[0]
+set_location_assignment PIN_T5 -to sdram0_ras_n
+set_location_assignment PIN_M5 -to sdram0_dqm[1]
+set_location_assignment PIN_R8 -to sdram0_we_n
+set_location_assignment PIN_AA3 -to sram0_ADDR[0]
+set_location_assignment PIN_AB3 -to sram0_ADDR[1]
+set_location_assignment PIN_AA4 -to sram0_ADDR[2]
+set_location_assignment PIN_AB4 -to sram0_ADDR[3]
+set_location_assignment PIN_AA5 -to sram0_ADDR[4]
+set_location_assignment PIN_AB10 -to sram0_ADDR[5]
+set_location_assignment PIN_AA11 -to sram0_ADDR[6]
+set_location_assignment PIN_AB11 -to sram0_ADDR[7]
+set_location_assignment PIN_V11 -to sram0_ADDR[8]
+set_location_assignment PIN_W11 -to sram0_ADDR[9]
+set_location_assignment PIN_R11 -to sram0_ADDR[10]
+set_location_assignment PIN_T11 -to sram0_ADDR[11]
+set_location_assignment PIN_Y10 -to sram0_ADDR[12]
+set_location_assignment PIN_U10 -to sram0_ADDR[13]
+set_location_assignment PIN_R10 -to sram0_ADDR[14]
+set_location_assignment PIN_T7 -to sram0_ADDR[15]
+set_location_assignment PIN_Y6 -to sram0_ADDR[16]
+set_location_assignment PIN_Y5 -to sram0_ADDR[17]
+set_location_assignment PIN_AB5 -to sram0_CE_N
+set_location_assignment PIN_AA6 -to sram0_DQ[0]
+set_location_assignment PIN_AB6 -to sram0_DQ[1]
+set_location_assignment PIN_AA7 -to sram0_DQ[2]
+set_location_assignment PIN_AB7 -to sram0_DQ[3]
+set_location_assignment PIN_AA8 -to sram0_DQ[4]
+set_location_assignment PIN_AB8 -to sram0_DQ[5]
+set_location_assignment PIN_AA9 -to sram0_DQ[6]
+set_location_assignment PIN_AB9 -to sram0_DQ[7]
+set_location_assignment PIN_Y9 -to sram0_DQ[8]
+set_location_assignment PIN_W9 -to sram0_DQ[9]
+set_location_assignment PIN_V9 -to sram0_DQ[10]
+set_location_assignment PIN_U9 -to sram0_DQ[11]
+set_location_assignment PIN_R9 -to sram0_DQ[12]
+set_location_assignment PIN_W8 -to sram0_DQ[13]
+set_location_assignment PIN_V8 -to sram0_DQ[14]
+set_location_assignment PIN_U8 -to sram0_DQ[15]
+set_location_assignment PIN_Y7 -to sram0_LB_N
+set_location_assignment PIN_T8 -to sram0_OE_N
+set_location_assignment PIN_W7 -to sram0_UB_N
+set_location_assignment PIN_AA10 -to sram0_WE_N
+set_global_assignment -name SEARCH_PATH "c:\\users\\jairoandres\\documents\\quartus\\projects\\puj-ca-de1-audio-pump\\build\\db\\ip\\system_design"
+set_global_assignment -name BDF_FILE "puj-ca-de1-audio-pump.bdf"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name QSYS_FILE ../system_design/system_design.qsys
+set_global_assignment -name LL_ENABLED ON -section_id Region_0
+set_global_assignment -name LL_AUTO_SIZE ON -section_id Region_0
+set_global_assignment -name LL_STATE FLOATING -section_id Region_0
+set_global_assignment -name LL_RESERVED OFF -section_id Region_0
+set_global_assignment -name LL_SECURITY_ROUTING_INTERFACE OFF -section_id Region_0
+set_global_assignment -name LL_IGNORE_IO_BANK_SECURITY_CONSTRAINT OFF -section_id Region_0
+set_global_assignment -name LL_PR_REGION OFF -section_id Region_0
+set_global_assignment -name LL_WIDTH 1 -section_id Region_0
+set_global_assignment -name LL_HEIGHT 1 -section_id Region_0
+set_global_assignment -name LL_ORIGIN X1_Y1 -section_id Region_0
+set_instance_assignment -name LL_MEMBER_OF Region_0 -to "system_design:inst|altera_avalon_sc_fifo:jtag0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo" -section_id Region_0
+set_instance_assignment -name LL_MEMBER_OF Region_0 -to "system_design:inst|altera_avalon_sc_fifo:nios0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo" -section_id Region_0
+set_instance_assignment -name LL_MEMBER_OF Region_0 -to "system_design:inst|altera_merlin_master_agent:nios0_data_master_translator_avalon_universal_master_0_agent" -section_id Region_0
+set_instance_assignment -name LL_MEMBER_OF Region_0 -to "system_design:inst|altera_merlin_master_agent:nios0_instruction_master_translator_avalon_universal_master_0_agent" -section_id Region_0
+set_instance_assignment -name LL_MEMBER_OF Region_0 -to "system_design:inst|altera_merlin_master_translator:nios0_data_master_translator" -section_id Region_0
+set_instance_assignment -name LL_MEMBER_OF Region_0 -to "system_design:inst|altera_merlin_master_translator:nios0_instruction_master_translator" -section_id Region_0
+set_instance_assignment -name LL_MEMBER_OF Region_0 -to "system_design:inst|altera_merlin_slave_agent:jtag0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent" -section_id Region_0
+set_instance_assignment -name LL_MEMBER_OF Region_0 -to "system_design:inst|altera_merlin_slave_agent:nios0_jtag_debug_module_translator_avalon_universal_slave_0_agent" -section_id Region_0
+set_instance_assignment -name LL_MEMBER_OF Region_0 -to "system_design:inst|altera_merlin_slave_translator:jtag0_avalon_jtag_slave_translator" -section_id Region_0
+set_instance_assignment -name LL_MEMBER_OF Region_0 -to "system_design:inst|altera_merlin_slave_translator:nios0_jtag_debug_module_translator" -section_id Region_0
+set_instance_assignment -name LL_MEMBER_OF Region_0 -to "system_design:inst|system_design_jtag0:jtag0" -section_id Region_0
+set_instance_assignment -name LL_MEMBER_OF Region_0 -to "system_design:inst|system_design_nios0:nios0" -section_id Region_0
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

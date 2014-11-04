@@ -1,3 +1,14 @@
 <library>
-   <path path="../terasic-ip/components.ipx" />
+   <path path="../ip/components.ipx" />
+    <component
+	   name="avl_mm_master_export"
+	   file="../system_design/avl_mm_master_export_hw.tcl"
+	   displayName="AvalonMM_Master_Export"
+	   version="1.0"
+	   description="Export a simple AvalonMM master interface as conduit"
+	   tags="CONNECTION_TYPES=avalon,clock,conduit,reset /// INTERNAL_COMPONENT=false"
+	   categories="PUJ Cali"
+	   factory="TclModuleFactory">
+	  <tag2 key="COMPONENT_EDITABLE" value="true" />
+	 </component>
 </library>

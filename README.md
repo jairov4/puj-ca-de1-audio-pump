@@ -13,8 +13,21 @@ Getting started
 To build this project follow this steps.
 
   1. Download one snapshot of this project.
-  2. Write your util function and instance the system unit in this project.
-  3. Build the project using Altera Quartus II v13 SP1, the project file is `build/puj-ca-de1-audio-pump.qpf`
+  2. Open the project using Altera Quartus II v13 SP1, the project file is `build/puj-ca-de1-audio-pump.qpf`
+  3. Diagram your custom circuit and connect it to the memory interface in `build/puj-ca-de1-audio-pump.bdf`
+
+Pins are already assigned.
+Audio device is initialized during startup.
+
+Project
+-------
+
+The project is about to implement a state machine based circuit able to sequence reads and writes to memory interface.
+The SDRAM component stores music/audio data, you should sequence reading of samples of music from SDRAM address space to write them into Audio FIFO component.
+Audio data is represented in memory as words of 16-bit per channel that needs to be sent to Audio FIFO to be played back.
+This is a stereo system, thus you need to send to FIFO two writes per sample. One write to address 0x01101020 with 16-bit of Left channel, and one write to 0x01101021 with 16-bit of Right channel. You must to perform this writes in this specific order, read least significant bit of 0x01101025 in order to know if your circuit is allowed to write a new sample (zero means allowed, one means FIFO full thus disallowed).
+
+Audio data will be loaded to SDRAM using System Console utility for Altera Qsys previously to circuit evaluation.
 
 Memory Map
 ----------

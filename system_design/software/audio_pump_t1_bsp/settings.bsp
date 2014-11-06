@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>4/11/2014 07:07:45 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1415102865722</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>5/11/2014 09:40:24 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1415198424902</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\JairoAndres\Documents\Quartus\Projects\puj-ca-de1-audio-pump\system_design\software\audio_pump_t1_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\JairoAndres\Documents\Quartus\Projects\puj-ca-de1-audio-pump\build\system_design.sopcinfo</SopcDesignFile>

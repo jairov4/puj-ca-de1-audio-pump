@@ -19,7 +19,7 @@
 ## PROGRAM "Quartus II"
 ## VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-## DATE    "Sun Nov 02 21:11:02 2014"
+## DATE    "Tue Nov 04 23:31:38 2014"
 
 ##
 ## DEVICE  "EP2C20F484C7"
@@ -40,15 +40,16 @@ set_time_format -unit ns -decimal_places 3
 
 create_clock -name {altera_reserved_tck} -period 100.000 -waveform { 0.000 50.000 } [get_ports {altera_reserved_tck}]
 create_clock -name {clk24} -period 41.666 -waveform { 0.000 20.833 } [get_ports { clk_clk }]
+create_clock -name {BCLK} -period 83.000 -waveform { 0.000 41.500 } [get_ports {audio0_BCLK}]
 
 
 #**************************************************************
 # Create Generated Clock
 #**************************************************************
 
-create_generated_clock -name {pll0|sd1|pll|clk[0]} -source [get_pins {pll0|sd1|pll|inclk[0]}] -duty_cycle 50.000 -multiply_by 25 -divide_by 12 -master_clock {clk24} [get_pins {pll0|sd1|pll|clk[0]}] 
-create_generated_clock -name {pll0|sd1|pll|clk[1]} -source [get_pins {pll0|sd1|pll|inclk[0]}] -duty_cycle 50.000 -multiply_by 25 -divide_by 12 -phase -60.000 -master_clock {clk24} [get_pins {pll0|sd1|pll|clk[1]}] 
-create_generated_clock -name {pll0|sd1|pll|clk[2]} -source [get_pins {pll0|sd1|pll|inclk[0]}] -duty_cycle 50.000 -multiply_by 1 -divide_by 2 -master_clock {clk24} [get_pins {pll0|sd1|pll|clk[2]}] 
+create_generated_clock -name {inst|pll0|sd1|pll|clk[0]} -source [get_pins {inst|pll0|sd1|pll|inclk[0]}] -duty_cycle 50.000 -multiply_by 25 -divide_by 12 -master_clock {clk24} [get_pins {inst|pll0|sd1|pll|clk[0]}] 
+create_generated_clock -name {inst|pll0|sd1|pll|clk[1]} -source [get_pins {inst|pll0|sd1|pll|inclk[0]}] -duty_cycle 50.000 -multiply_by 25 -divide_by 12 -phase -60.000 -master_clock {clk24} [get_pins {inst|pll0|sd1|pll|clk[1]}] 
+create_generated_clock -name {inst|pll0|sd1|pll|clk[2]} -source [get_pins {inst|pll0|sd1|pll|inclk[0]}] -duty_cycle 50.000 -multiply_by 1 -divide_by 2 -master_clock {clk24} [get_pins {inst|pll0|sd1|pll|clk[2]}] 
 
 
 #**************************************************************
@@ -80,9 +81,6 @@ create_generated_clock -name {pll0|sd1|pll|clk[2]} -source [get_pins {pll0|sd1|p
 #**************************************************************
 
 set_clock_groups -asynchronous -group [get_clocks {altera_reserved_tck}] 
-set_clock_groups -asynchronous -group [get_clocks {altera_reserved_tck}] 
-set_clock_groups -asynchronous -group [get_clocks {altera_reserved_tck}] 
-
 
 #**************************************************************
 # Set False Path
@@ -95,7 +93,7 @@ set_false_path -from [get_registers {*|alt_jtag_atlantic:*|read_req}]
 set_false_path -from [get_registers {*|alt_jtag_atlantic:*|rvalid}] -to [get_registers {*|alt_jtag_atlantic*|td_shift[*]}]
 set_false_path -from [get_registers {*|t_dav}] -to [get_registers {*|alt_jtag_atlantic:*|tck_t_dav}]
 set_false_path -from [get_registers {*|alt_jtag_atlantic:*|user_saw_rvalid}] -to [get_registers {*|alt_jtag_atlantic:*|rvalid0*}]
-set_false_path -from [get_registers {*|alt_jtag_atlantic:*|wdata[*]}] -to [get_registers *]
+set_false_path -from [get_registers {*|alt_jtag_atlantic:*|wdata[*]}] -to [all_registers]
 set_false_path -from [get_registers {*|alt_jtag_atlantic:*|write}] -to [get_registers {*|alt_jtag_atlantic:*|write1*}]
 set_false_path -from [get_registers {*|alt_jtag_atlantic:*|write_stalled}] -to [get_registers {*|alt_jtag_atlantic:*|t_ena*}]
 set_false_path -from [get_registers {*|alt_jtag_atlantic:*|write_stalled}] -to [get_registers {*|alt_jtag_atlantic:*|t_pause*}]

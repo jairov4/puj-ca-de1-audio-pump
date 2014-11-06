@@ -29,6 +29,31 @@ This is a stereo system, thus you need to send to FIFO two writes per sample. On
 
 Audio data will be loaded to SDRAM using System Console utility for Altera Qsys previously to circuit evaluation.
 
+Recommended How To
+------------------
+
+Your circuit needs to have the following components:
+
+  1. One counter with sync reset and carry out. This counter is to follow ascending address values, SDRAM memory needs count incrementing by 2 each address.
+  2. Two 16-bit registers to temporary store the read data.
+  3. Some multiplexers.
+  4. One State Machine to sequence the procedure.
+  
+Then, your state machine need to accomplish this steps:
+
+  1. Reset the address counter to SDRAM begin address.
+  2. Set up a read transaction to SDRAM memory. (`read = '1'`, `write='0'`, `address = addressCounter`)
+  3. Wait for read transaction accomplished from memory. Read is done when `waitrequest = '0'`.
+  4. Put 32-bit `readdata` into temporary registers, it needs to be done in the same clock cycle that `waitrequest = '0'`.
+  5. Increment address counter by 4.
+  6. Set up a 16-bit write transaction to Audio FIFO Left Channel. (`read = '0'`, `write='1'`, `address = 0x01101020`, `writedata = tmpReg1`)
+  7. Wait for write transaction accomplished from memory. Write is done when `waitrequest = '0'`
+  8. Set up a 16-bit write transaction to Audio FIFO Right Channel. (`read = '0'`, `write='1'`, `address = 0x01101021`, `writedata = tmpReg1`)
+  9. Wait for write transaction accomplished from memory. Write is done when `waitrequest = '0'`
+  10. Set up a read transaction to Audio FIFO status. (`read = '1'`, `write='0'`, `address = 0x01101025`)
+  11. Wait for read transaction accomplished from Audio FIFO status. Read is done when `waitrequest = ''0''`
+  12. If the least significant bit of `readdata` is zero go to step 2. else goto step 9. Remember perform this check in the same clock cycle when `waitrequest = '0'`
+
 Memory Map
 ----------
 
@@ -37,6 +62,6 @@ This is the memory addressing map
 | Peripheral | Begin Address | End Address | Size |
 |------------|---------------|-------------|------|
 | SDRAM      | 0x800000      | 0xFF0000    | 8MB  |
-| PIO        | 0x0           | 0xF         | 16 B |
+| PIO        | 0x0           | 0xF         |      |
 | Audio FIFO | 0x01101020    | 0x0110103F  |      |
-| 7-segment  | 0x01101058    | 0x0110105B  | 4 B  |
+| 7-segment  | 0x01101058    | 0x0110105B  |      |

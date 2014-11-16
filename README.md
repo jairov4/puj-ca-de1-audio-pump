@@ -44,11 +44,11 @@ Then, your state machine need to accomplish this steps:
   1. Reset the address counter to SDRAM begin address.
   2. Set up a read transaction to SDRAM memory. (`read = '1'`, `write='0'`, `address = addressCounter`)
   3. Wait for read transaction accomplished from memory. Read is done when `waitrequest = '0'`.
-  4. Put 32-bit `readdata` into temporary registers, it needs to be done in the same clock cycle that `waitrequest = '0'`.
+  4. Put 32-bit `readdata` into temporary registers `tmpReg1` and `tmpReg2`, it needs to be done in the same clock cycle that `waitrequest = '0'`.
   5. Increment address counter by 4.
   6. Set up a 16-bit write transaction to Audio FIFO Left Channel. (`read = '0'`, `write='1'`, `address = 0x01101020`, `writedata = tmpReg1`)
   7. Wait for write transaction accomplished from memory. Write is done when `waitrequest = '0'`
-  8. Set up a 16-bit write transaction to Audio FIFO Right Channel. (`read = '0'`, `write='1'`, `address = 0x01101021`, `writedata = tmpReg1`)
+  8. Set up a 16-bit write transaction to Audio FIFO Right Channel. (`read = '0'`, `write='1'`, `address = 0x01101021`, `writedata = tmpReg2`)
   9. Wait for write transaction accomplished from memory. Write is done when `waitrequest = '0'`
   10. Set up a read transaction to Audio FIFO status. (`read = '1'`, `write='0'`, `address = 0x01101025`)
   11. Wait for read transaction accomplished from Audio FIFO status. Read is done when `waitrequest = ''0''`

@@ -14,8 +14,9 @@ To build this project follow this steps.
 
   1. Download one snapshot of this project.
   2. Open the project using Altera Quartus II v13 SP1, the project file is `build/puj-ca-de1-audio-pump.qpf`
-  3. Diagram your custom circuit and connect it to the memory interface in `build/puj-ca-de1-audio-pump.bdf`
-  4. If you are using Quartus II Web Edition, you need to disable Signal Tap II feature of the project to compile succesfully.
+  3. Diagram your custom circuit in a new block diagram file.
+  4. Create a new symbol file for your custom circuit, instance it and connect it to the memory interface in `build/puj-ca-de1-audio-pump.bdf`
+  5. If you are using Quartus II Web Edition, you need to disable Signal Tap II feature of the project to compile succesfully.
 
 Pins are already assigned for Terasic DE1 board.
 Audio device is initialized during startup.

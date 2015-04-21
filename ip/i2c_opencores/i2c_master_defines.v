@@ -53,6 +53,7 @@
 //               Added headers.
 //
 
+`timescale 1ns / 1ns
 
 // I2C registers wishbone addresses
 

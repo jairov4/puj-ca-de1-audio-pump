@@ -41,6 +41,10 @@ set_fileset_property QUARTUS_SYNTH TOP_LEVEL avl_mm_master_export
 set_fileset_property QUARTUS_SYNTH ENABLE_RELATIVE_INCLUDE_PATHS false
 add_fileset_file avl_mm_master_export.v VERILOG PATH avl_mm_master_export.v TOP_LEVEL_FILE
 
+add_fileset SIM_VERILOG SIM_VERILOG "" ""
+set_fileset_property SIM_VERILOG TOP_LEVEL avl_mm_master_export
+set_fileset_property SIM_VERILOG ENABLE_RELATIVE_INCLUDE_PATHS false
+add_fileset_file avl_mm_master_export.v VERILOG PATH avl_mm_master_export.v TOP_LEVEL_FILE
 
 # 
 # parameters

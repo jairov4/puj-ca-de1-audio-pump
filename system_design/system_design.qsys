@@ -187,7 +187,7 @@
  <parameter name="projectName" value="" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1414984475862" />
+ <parameter name="timeStamp" value="1429595253528" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="audio0" internal="audio0.conduit_end" type="conduit" dir="end" />
@@ -233,7 +233,7 @@
   <parameter name="casLatency" value="3" />
   <parameter name="columnWidth" value="8" />
   <parameter name="dataWidth" value="16" />
-  <parameter name="generateSimulationModel" value="false" />
+  <parameter name="generateSimulationModel" value="true" />
   <parameter name="initRefreshCommands" value="2" />
   <parameter name="model">single_Micron_MT48LC4M32B2_7_chip</parameter>
   <parameter name="numberOfBanks" value="4" />

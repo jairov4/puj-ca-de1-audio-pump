@@ -11,13 +11,15 @@
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="442" />
-   <clocksource preferredWidth="440" />
-   <frequency preferredWidth="423" />
+   <clockname preferredWidth="336" />
+   <clocksource preferredWidth="336" />
+   <frequency preferredWidth="316" />
   </columns>
  </clocktable>
- <library expandedCategories="Library,Project" />
- <window width="1680" height="1010" x="0" y="0" />
- <generation path="../auto-src" />
+ <library expandedCategories="Project,Library" />
+ <window width="1374" height="941" x="0" y="0" />
+ <generation
+   path="D:/temp/altera_sim/puj-ca-de1-audio-pump/generated_files"
+   simulation="VERILOG" />
  <hdlexample language="VERILOG" />
 </preferences>

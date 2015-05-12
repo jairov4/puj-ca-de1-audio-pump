@@ -64,7 +64,7 @@ This is the memory addressing map
 
 | Peripheral | Begin Address | End Address | Size |
 |------------|---------------|-------------|------|
-| SDRAM      | 0x800000      | 0xFF0000    | 8MB  |
+| SDRAM      | 0x800000      | 0xFFFFFF    | 8MB  |
 | PIO        | 0x0           | 0xF         |      |
 | Audio FIFO | 0x01101020    | 0x0110103F  |      |
 | 7-segment  | 0x01101058    | 0x0110105B  |      |

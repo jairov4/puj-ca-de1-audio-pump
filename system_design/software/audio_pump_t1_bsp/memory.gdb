@@ -1,9 +1,9 @@
 # memory.gdb - GDB memory region definitions
 #
 # Machine generated for CPU 'nios0' in SOPC Builder design 'system_design'
-# SOPC Builder design path: C:/Users/JairoAndres/Documents/Quartus/Projects/puj-ca-de1-audio-pump/build/system_design.sopcinfo
+# SOPC Builder design path: ../../system_design.sopcinfo
 #
-# Generated: Sun Nov 02 23:34:18 COT 2014
+# Generated: Fri May 15 10:01:42 COT 2015
 
 # DO NOT MODIFY THIS FILE
 #
@@ -51,3 +51,6 @@ memory 0x800000 0x1000000 cache
 
 # sram0
 memory 0x1080000 0x1100000 cache
+
+# onchip_memory2_0
+memory 0x1200000 0x1204000 cache

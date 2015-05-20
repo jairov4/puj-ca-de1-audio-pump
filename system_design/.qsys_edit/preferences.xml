@@ -3,23 +3,21 @@
  <debug showDebugMenu="0" />
  <systemtable>
   <columns>
-   <connections preferredWidth="175" />
+   <connections preferredWidth="223" />
    <irq preferredWidth="34" />
-   <name preferredWidth="303" />
+   <name preferredWidth="224" />
    <inputclock preferredWidth="148" />
   </columns>
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="336" />
-   <clocksource preferredWidth="336" />
-   <frequency preferredWidth="316" />
+   <clockname preferredWidth="468" />
+   <clocksource preferredWidth="467" />
+   <frequency preferredWidth="449" />
   </columns>
  </clocktable>
  <library expandedCategories="Project,Library" />
- <window width="1374" height="941" x="0" y="0" />
- <generation
-   path="D:/temp/altera_sim/puj-ca-de1-audio-pump/generated_files"
-   simulation="VERILOG" />
+ <window width="1696" height="1026" x="-8" y="-8" />
+ <generation path="../generated_files" simulation="VERILOG" />
  <hdlexample language="VERILOG" />
 </preferences>

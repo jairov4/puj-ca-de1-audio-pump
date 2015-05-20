@@ -1,0 +1,6 @@
+.metadata/
+**.o
+**.elf
+**.map
+**.objdump
+**.d

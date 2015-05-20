@@ -2,9 +2,9 @@
  * linker.h - Linker script mapping information
  *
  * Machine generated for CPU 'nios0' in SOPC Builder design 'system_design'
- * SOPC Builder design path: C:/Users/JairoAndres/Documents/Quartus/Projects/puj-ca-de1-audio-pump/build/system_design.sopcinfo
+ * SOPC Builder design path: ../../system_design.sopcinfo
  *
- * Generated: Tue Nov 04 07:07:23 COT 2014
+ * Generated: Fri May 15 10:01:42 COT 2015
  */
 
 /*
@@ -65,12 +65,14 @@
  *
  */
 
-#define RESET_REGION_BASE 0x1080000
+#define ONCHIP_MEMORY2_0_REGION_BASE 0x1200020
+#define ONCHIP_MEMORY2_0_REGION_SPAN 16352
+#define RESET_REGION_BASE 0x1200000
 #define RESET_REGION_SPAN 32
 #define SDRAM0_REGION_BASE 0x800000
 #define SDRAM0_REGION_SPAN 8388608
-#define SRAM0_REGION_BASE 0x1080020
-#define SRAM0_REGION_SPAN 524256
+#define SRAM0_REGION_BASE 0x1080000
+#define SRAM0_REGION_SPAN 524288
 
 
 /*
@@ -78,11 +80,11 @@
  *
  */
 
-#define ALT_EXCEPTIONS_DEVICE SRAM0
-#define ALT_RESET_DEVICE SRAM0
-#define ALT_RODATA_DEVICE SRAM0
-#define ALT_RWDATA_DEVICE SRAM0
-#define ALT_TEXT_DEVICE SRAM0
+#define ALT_EXCEPTIONS_DEVICE ONCHIP_MEMORY2_0
+#define ALT_RESET_DEVICE ONCHIP_MEMORY2_0
+#define ALT_RODATA_DEVICE ONCHIP_MEMORY2_0
+#define ALT_RWDATA_DEVICE SDRAM0
+#define ALT_TEXT_DEVICE ONCHIP_MEMORY2_0
 
 
 /*

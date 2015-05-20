@@ -1,4 +1,7 @@
 incremental_db/
 output_files/
 db/
+dse/
 .qsys_edit/
+*.rpt
+*.qws

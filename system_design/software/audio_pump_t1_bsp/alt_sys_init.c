@@ -2,9 +2,9 @@
  * alt_sys_init.c - HAL initialization source
  *
  * Machine generated for CPU 'nios0' in SOPC Builder design 'system_design'
- * SOPC Builder design path: C:/Users/JairoAndres/Documents/Quartus/Projects/puj-ca-de1-audio-pump/build/system_design.sopcinfo
+ * SOPC Builder design path: ../../system_design.sopcinfo
  *
- * Generated: Sun Nov 02 23:34:18 COT 2014
+ * Generated: Fri May 15 09:07:05 COT 2015
  */
 
 /*

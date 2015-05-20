@@ -87,7 +87,7 @@ ACDS_VERSION := 13.0sp1
 
 # Qsys--generated SOPCINFO file. Required for resolving node instance ID's with 
 # design component names. 
-SOPCINFO_FILE := C:/Users/JairoAndres/Documents/Quartus/Projects/puj-ca-de1-audio-pump/build/system_design.sopcinfo
+SOPCINFO_FILE := $(ABS_BSP_ROOT_DIR)/../../system_design.sopcinfo
 
 # Big-Endian operation. 
 # setting BIG_ENDIAN is false

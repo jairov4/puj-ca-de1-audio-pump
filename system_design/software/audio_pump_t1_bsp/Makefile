@@ -103,7 +103,7 @@ ACDS_VERSION := 13.0sp1
 # BUILD_NUMBER: 232
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := C:/Users/JairoAndres/Documents/Quartus/Projects/puj-ca-de1-audio-pump/build/system_design.sopcinfo
+SOPC_FILE := ../../system_design.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS
@@ -128,12 +128,6 @@ BSP_ARFLAGS = -src
 # Custom flags only passed to the assembler. This setting defines the value of 
 # BSP_ASFLAGS in Makefile. 
 BSP_ASFLAGS = -Wa,-gdwarf2
-
-# C/C++ compiler debug level. '-g' provides the default set of debug symbols 
-# typically required to debug a typical application. Omitting '-g' removes 
-# debug symbols from the ELF. This setting defines the value of 
-# BSP_CFLAGS_DEBUG in Makefile. 
-BSP_CFLAGS_DEBUG = -g
 
 # C/C++ compiler optimization level. "-O0" = no optimization,"-O2" = "normal" 
 # optimization, etc. "-O0" is recommended for code that you want to debug since 

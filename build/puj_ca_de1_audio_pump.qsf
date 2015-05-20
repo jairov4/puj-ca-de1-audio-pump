@@ -181,7 +181,6 @@ set_location_assignment PIN_Y7 -to sram0_LB_N
 set_location_assignment PIN_T8 -to sram0_OE_N
 set_location_assignment PIN_W7 -to sram0_UB_N
 set_location_assignment PIN_AA10 -to sram0_WE_N
-set_global_assignment -name SEARCH_PATH "c:\\users\\jairoandres\\documents\\quartus\\projects\\puj_ca_de1_audio_pump\\build\\db\\ip\\system_design"
 set_global_assignment -name BDF_FILE "puj_ca_de1_audio_pump.bdf"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
@@ -211,4 +210,11 @@ set_instance_assignment -name LL_MEMBER_OF Region_0 -to "system_design:inst|syst
 set_global_assignment -name ENABLE_SIGNALTAP OFF
 set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
 set_global_assignment -name SLD_FILE "D:/temp/altera_sim/puj-ca-de1-audio-pump/build/stp1_auto_stripped.stp"
+set_global_assignment -name SEARCH_PATH "d:\\temp\\altera_sim\\puj-ca-de1-audio-pump\\system_design"
+set_global_assignment -name OPTIMIZE_HOLD_TIMING "ALL PATHS"
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
+set_location_assignment PIN_T22 -to gpio[2]
+set_location_assignment PIN_T21 -to gpio[3]
+set_location_assignment PIN_R21 -to gpio[1]
+set_location_assignment PIN_R22 -to gpio[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -178,7 +178,7 @@ CRT0 :=
 SYS_LIB :=
 
 # Define path to the root of the BSP.
-BSP_ROOT_DIR := C:/Users/JairoAndres/Documents/Quartus/Projects/puj-ca-de1-audio-pump/system_design/software/audio_pump_t1_bsp/
+BSP_ROOT_DIR := ../audio_pump_t1_bsp/
 
 # List of application specific include directories, library directories and library names
 APP_INCLUDE_DIRS :=

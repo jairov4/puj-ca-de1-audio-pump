@@ -49,11 +49,11 @@ Then, your state machine need to accomplish this steps:
   3. Wait for read transaction accomplished from memory. Read is done when `waitrequest = '0'`.
   4. Put 32-bit `readdata` into temporary registers `tmpReg1` and `tmpReg2`, it needs to be done in the same clock cycle that `waitrequest = '0'`.
   5. Increment address counter by 4.
-  6. Set up a 16-bit write transaction to Audio FIFO Left Channel. (`read = '0'`, `write='1'`, `address = 0x01101020`, `writedata = tmpReg1`)
+  6. Set up a 16-bit write transaction to Audio FIFO Left Channel. (`read = '0'`, `write='1'`, `address = 0x40`, `writedata = tmpReg1`)
   7. Wait for write transaction accomplished from memory. Write is done when `waitrequest = '0'`
-  8. Set up a 16-bit write transaction to Audio FIFO Right Channel. (`read = '0'`, `write='1'`, `address = 0x01101021`, `writedata = tmpReg2`)
+  8. Set up a 16-bit write transaction to Audio FIFO Right Channel. (`read = '0'`, `write='1'`, `address = 0x44`, `writedata = tmpReg2`)
   9. Wait for write transaction accomplished from memory. Write is done when `waitrequest = '0'`
-  10. Set up a read transaction to Audio FIFO status. (`read = '1'`, `write='0'`, `address = 0x01101025`)
+  10. Set up a read transaction to Audio FIFO status. (`read = '1'`, `write='0'`, `address = 0x54`)
   11. Wait for read transaction accomplished from Audio FIFO status. Read is done when `waitrequest = ''0''`
   12. If the least significant bit of `readdata` is zero go to step 2. else goto step 9. Remember perform this check in the same clock cycle when `waitrequest = '0'`
 
@@ -66,5 +66,5 @@ This is the memory addressing map
 |------------|---------------|-------------|------|
 | SDRAM      | 0x800000      | 0xFFFFFF    | 8MB  |
 | PIO        | 0x0           | 0xF         |      |
-| Audio FIFO | 0x01101020    | 0x0110103F  |      |
+| Audio FIFO | 0x40          | 0x54        |      |
 | 7-segment  | 0x01101058    | 0x0110105B  |      |

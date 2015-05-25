@@ -28,7 +28,7 @@ Project
 The project is about to implement a state machine based circuit able to sequence reads and writes to memory interface.
 The SDRAM component stores music/audio data, you should sequence reading of samples of music from SDRAM address space to write them into Audio FIFO component.
 Audio data is represented in memory as words of 16-bit per channel that needs to be sent to Audio FIFO to be played back.
-This is a stereo system, thus you need to send to FIFO two writes per sample. One write to address 0x01101020 with 16-bit of Left channel, and one write to 0x01101021 with 16-bit of Right channel. You must to perform this writes in this specific order, read least significant bit of 0x01101025 in order to know if your circuit is allowed to write a new sample (zero means allowed, one means FIFO full thus disallowed).
+This is a stereo system, thus you need to send to FIFO two writes per sample. One write to address 0x40 with 16-bit of Left channel, and one write to 0x44 with 16-bit of Right channel. You must to perform this writes in this specific order, read least significant bit of 0x54 in order to know if your circuit is allowed to write a new sample (zero means allowed, one means FIFO full thus disallowed).
 
 Audio data will be loaded to SDRAM using System Console utility for Altera Qsys previously to circuit evaluation.
 

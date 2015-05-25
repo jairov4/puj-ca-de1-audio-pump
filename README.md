@@ -30,7 +30,16 @@ The SDRAM component stores music/audio data, you should sequence reading of samp
 Audio data is represented in memory as words of 16-bit per channel that needs to be sent to Audio FIFO to be played back.
 This is a stereo system, thus you need to send to FIFO two writes per sample. One write to address 0x40 with 16-bit of Left channel, and one write to 0x44 with 16-bit of Right channel. You must to perform this writes in this specific order, read least significant bit of 0x54 in order to know if your circuit is allowed to write a new sample (zero means allowed, one means FIFO full thus disallowed).
 
-Audio data will be loaded to SDRAM using System Console utility for Altera Qsys previously to circuit evaluation.
+Audio data will be loaded to SDRAM using System Console utility for Altera Qsys previously to circuit evaluation using this script.
+
+```tcl
+set master_svc [get_service_paths master]
+set master_svc [lindex $master_svc 0]
+
+open_service master $master_svc
+master_write_from_file $master_svc "C:\\your_path\\sound.wav" 0x800000
+close_service master $master_svc
+```
 
 Recommended How To
 ------------------
